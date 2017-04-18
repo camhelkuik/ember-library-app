@@ -6,6 +6,20 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: 'AIzaSyD_z3tXCWADcu6e7-OlM14P7W8CEiC9tNo',
+      authDomain: 'library-app-871ab.firebaseapp.com',
+      databaseURL: 'https://library-app-871ab.firebaseio.com',
+      projectId: 'library-app-871ab',
+      storageBucket: 'library-app-871ab.appspot.com',
+      messagingSenderId: "975133292131"
+    },
+// if using ember-cli-content-security-policy
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -25,10 +39,10 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+     ENV.APP.LOG_ACTIVE_GENERATION = true;
+     ENV.APP.LOG_TRANSITIONS = true;
+     ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+     ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {
