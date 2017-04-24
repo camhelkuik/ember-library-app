@@ -1,14 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    tagName: "span",
+  tagName: 'span',
 
-    className: ['label label-success label-fade'],
-    classNameBindings: ['isShowing:label-show'],
+  classNames: ['label label-success label-fade'],
+  classNameBindings: ['isShowing:label-show'],
 
-    isShowing: false,
+  isShowing: false,
 
-    isShowingChanged: Ember.observer('isShowing', function () {
-        Ember.run.later(() => this.set('isShowing', false), 3000);
-    })
+  isShowingChanged: Ember.observer('isShowing', function() {
+    Ember.run.later(() => this.set('isShowing', false), 3000);
+  })
 });
